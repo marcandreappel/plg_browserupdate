@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.1" type="plugin" group="system" method="upgrade">
+    <name>PLG_HC_BROWSERUPDATE_NAME</name>
+    <author>Marc-André Appel</author>
+    <creationDate>30/01/2018</creationDate>
+    <copyright>Copyright (C) 2018. All rights reserved.</copyright>
+    <license>LGPL-3.0; see LICENSE.md</license>
+    <authorEmail>marc-andre@hyride-conseil.fr</authorEmail>
+    <authorUrl>www.hybride-conseil.fr</authorUrl>
+    <version>0.1.0</version>
+    <description>PLG_HC_BROWSERUPDATE_DESCRIPTION</description>
+    <files>
+        <folder>language</folder>
+        <filename plugin="browserupdate">browserupdate.php</filename>
+    </files>
+    <languages folder="language">
+        <language tag="fr-FR">fr-FR/fr-FR.plg_system_browserupdate.ini</language>
+        <language tag="fr-FR">fr-FR/fr-FR.plg_system_browserupdate.sys.ini</language>
+    </languages>
+    <updateservers>
+        <server type="extension" priority="1" name="Hybride Conseil Update Server @ GitHub"><![CDATA[http://hybride-conseil.github.io/update.xml]]></server>
+    </updateservers>
+    <config>
+        <fields name="params">
+            <fieldset name="basic">
+                <field
+                        name="message"
+                        type="note"
+                        label="PLG_HC_BROWSERUPDATE_CONFIG_LABEL"
+                />
+
+                <field
+                        name="hc-browser-update-ie-edge-version"
+                        type="list"
+                        label="IE / EDGE"
+                        description="PLG_HC_BROWSERUPDATE_BROWSER_VERSION_DESC"
+                        default="-4"
+                        size="1"
+                >
+                    <option value="-0.01">PLG_HC_BROWSERUPDATE_ALL_OBSOLETE_VERSIONS</option>
+                    <option value="14">&lt;= 14</option>
+                    <option value="13">&lt;= 13</option>
+                    <option value="12">&lt;= 12</option>
+                    <option value="11">&lt;= 11</option>
+                    <option value="10">&lt;= 10</option>
+                    <option value="9">&lt;= 9</option>
+                    <option value="-6">PLG_HC_BROWSERUPDATE_6_LAST_VERSION</option>
+                    <option value="-5">PLG_HC_BROWSERUPDATE_5_LAST_VERSION</option>
+                    <option value="-4">PLG_HC_BROWSERUPDATE_4_LAST_VERSION</option>
+                    <option value="-3">PLG_HC_BROWSERUPDATE_3_LAST_VERSION</option>
+                    <option value="-2">PLG_HC_BROWSERUPDATE_2_LAST_VERSION</option>
+                    <option value="-1">PLG_HC_BROWSERUPDATE_1_LAST_VERSION</option>
+                </field>
+
+                <field
+                        name="hc-browser-update-firefox-version"
+                        type="list"
+                        label="Firefox"
+                        description="PLG_HC_BROWSERUPDATE_BROWSER_VERSION_DESC"
+                        default="-4"
+                        size="1"
+                >
+                    <option value="-0.01">PLG_HC_BROWSERUPDATE_ALL_OBSOLETE_VERSIONS</option>
+                    <option value="56">&lt;= 56</option>
+                    <option value="55">&lt;= 55</option>
+                    <option value="54">&lt;= 54</option>
+                    <option value="53">&lt;= 53</option>
+                    <option value="52">&lt;= 52</option>
+                    <option value="51">&lt;= 51</option>
+                    <option value="-6">PLG_HC_BROWSERUPDATE_6_LAST_VERSION</option>
+                    <option value="-5">PLG_HC_BROWSERUPDATE_5_LAST_VERSION</option>
+                    <option value="-4">PLG_HC_BROWSERUPDATE_4_LAST_VERSION</option>
+                    <option value="-3">PLG_HC_BROWSERUPDATE_3_LAST_VERSION</option>
+                    <option value="-2">PLG_HC_BROWSERUPDATE_2_LAST_VERSION</option>
+                    <option value="-1">PLG_HC_BROWSERUPDATE_1_LAST_VERSION</option>
+                </field>
+                <field
+                        name="hc-browser-update-opera-version"
+                        type="list"
+                        label="Opera"
+                        description="PLG_HC_BROWSERUPDATE_BROWSER_VERSION_DESC"
+                        default="-4"
+                        size="1"
+                >
+                    <option value="-0.01">PLG_HC_BROWSERUPDATE_ALL_OBSOLETE_VERSIONS</option>
+                    <option value="49">&lt;= 49</option>
+                    <option value="48">&lt;= 48</option>
+                    <option value="47">&lt;= 47</option>
+                    <option value="46">&lt;= 46</option>
+                    <option value="45">&lt;= 45</option>
+                    <option value="44">&lt;= 44</option>
+                    <option value="-6">PLG_HC_BROWSERUPDATE_6_LAST_VERSION</option>
+                    <option value="-5">PLG_HC_BROWSERUPDATE_5_LAST_VERSION</option>
+                    <option value="-4">PLG_HC_BROWSERUPDATE_4_LAST_VERSION</option>
+                    <option value="-3">PLG_HC_BROWSERUPDATE_3_LAST_VERSION</option>
+                    <option value="-2">PLG_HC_BROWSERUPDATE_2_LAST_VERSION</option>
+                    <option value="-1">PLG_HC_BROWSERUPDATE_1_LAST_VERSION</option>
+                </field>
+                <field
+                        name="hc-browser-update-safari-version"
+                        type="list"
+                        label="Safari"
+                        description="PLG_HC_BROWSERUPDATE_BROWSER_VERSION_DESC"
+                        default="-2"
+                        size="1"
+                >
+                    <option value="-0.01">PLG_HC_BROWSERUPDATE_ALL_OBSOLETE_VERSIONS</option>
+                    <option value="10">&lt;= 10</option>
+                    <option value="9">&lt;= 9</option>
+                    <option value="8">&lt;= 8</option>
+                    <option value="7">&lt;= 7</option>
+                    <option value="6">&lt;= 6</option>
+                    <option value="5">&lt;= 5</option>
+                    <option value="-6">PLG_HC_BROWSERUPDATE_6_LAST_VERSION</option>
+                    <option value="-5">PLG_HC_BROWSERUPDATE_5_LAST_VERSION</option>
+                    <option value="-4">PLG_HC_BROWSERUPDATE_4_LAST_VERSION</option>
+                    <option value="-3">PLG_HC_BROWSERUPDATE_3_LAST_VERSION</option>
+                    <option value="-2">PLG_HC_BROWSERUPDATE_2_LAST_VERSION</option>
+                    <option value="-1">PLG_HC_BROWSERUPDATE_1_LAST_VERSION</option>
+                </field>
+                <field
+                        name="hc-browser-update-chrome-version"
+                        type="list"
+                        label="Chrome"
+                        description="PLG_HC_BROWSERUPDATE_BROWSER_VERSION_DESC"
+                        default="-4"
+                        size="1"
+                >
+                    <option value="-0.01">PLG_HC_BROWSERUPDATE_ALL_OBSOLETE_VERSIONS</option>
+                    <option value="62">&lt;= 62</option>
+                    <option value="61">&lt;= 61</option>
+                    <option value="60">&lt;= 60</option>
+                    <option value="59">&lt;= 59</option>
+                    <option value="58">&lt;= 58</option>
+                    <option value="57">&lt;= 57</option>
+                    <option value="-6">PLG_HC_BROWSERUPDATE_6_LAST_VERSION</option>
+                    <option value="-5">PLG_HC_BROWSERUPDATE_5_LAST_VERSION</option>
+                    <option value="-4">PLG_HC_BROWSERUPDATE_4_LAST_VERSION</option>
+                    <option value="-3">PLG_HC_BROWSERUPDATE_3_LAST_VERSION</option>
+                    <option value="-2">PLG_HC_BROWSERUPDATE_2_LAST_VERSION</option>
+                    <option value="-1">PLG_HC_BROWSERUPDATE_1_LAST_VERSION</option>
+                </field>
+                <field
+                    name="hc-browser-update-insecure-versions"
+                    type="checkbox"
+                    label="PLG_HC_BROWSERUPDATE_ALL_DANGEROUS_VERSIONS"
+                    default="checked"
+                    />
+                <field
+                    name="hc-browser-update-unsupported-browsers"
+                    type="checkbox"
+                    label="PLG_HC_BROWSERUPDATE_ALL_VERSIONS_VERSIONS"
+                    />
+                <field
+                    name="hc-browser-update-mobile-browsers"
+                    type="checkbox"
+                    label="PLG_HC_BROWSERUPDATE_MOBILE_BROWSERS"
+                    />
+                <field
+                        name="hc-browser-update-style"
+                        type="list"
+                        label="PLG_HC_BROWSERUPDATE_POPUP_POSITION"
+                        description="PLG_HC_BROWSERUPDATE_BROWSER_VERSION_DESC"
+                        default="-4"
+                        size="1"
+                >
+                    <option value="top">PLG_HC_BROWSERUPDATE_POPUP_POSITION_TOP</option>
+                    <option value="bottom">PLG_HC_BROWSERUPDATE_POPUP_POSITION_BOTTOM</option>
+                    <option value="corner">PLG_HC_BROWSERUPDATE_POPUP_POSITION_CORNER</option>
+                </field>
+            </fieldset>
+        </fields>
+    </config>
+</extension>
