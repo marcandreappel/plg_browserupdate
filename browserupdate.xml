@@ -1,43 +1,79 @@
 <?xml version="1.0" encoding="utf-8"?>
-<extension version="3.1" type="plugin" group="system" method="upgrade">
-    <name>PLG_HC_BROWSERUPDATE_NAME</name>
-    <author>Marc-André Appel</author>
-    <creationDate>30/01/2018</creationDate>
-    <copyright>Copyright (C) 2018. All rights reserved.</copyright>
-    <license>LGPL-3.0; see LICENSE.md</license>
-    <authorEmail>marc-andre@hyride-conseil.fr</authorEmail>
-    <authorUrl>www.hybride-conseil.fr</authorUrl>
-    <version>0.1.0</version>
-    <description>PLG_HC_BROWSERUPDATE_DESCRIPTION</description>
+<extension
+        version="3.1"
+        type="plugin"
+        group="system"
+        method="upgrade">
+    <name>
+        PLG_HC_BROWSERUPDATE_NAME
+    </name>
+    <author>
+        Marc-André Appel
+    </author>
+    <creationDate>
+        30/01/2018
+    </creationDate>
+    <copyright>
+        Copyright © 2018. All rights reserved.
+    </copyright>
+    <license>
+        LGPL-3.0; see LICENSE.md
+    </license>
+    <authorEmail>
+        marc-andre@hyride-conseil.fr
+    </authorEmail>
+    <authorUrl>
+        www.hybride-conseil.fr
+    </authorUrl>
+    <version>
+        0.1.0
+    </version>
+    <description>
+        PLG_HC_BROWSERUPDATE_DESCRIPTION
+    </description>
     <files>
         <folder>language</folder>
         <filename plugin="browserupdate">browserupdate.php</filename>
     </files>
-    <languages folder="language">
-        <language tag="fr-FR">fr-FR/fr-FR.plg_system_browserupdate.ini</language>
-        <language tag="fr-FR">fr-FR/fr-FR.plg_system_browserupdate.sys.ini</language>
+    <languages
+            folder="language">
+        <language
+                tag="fr-FR">
+            fr-FR/fr-FR.plg_system_browserupdate.ini
+        </language>
+        <language
+                tag="fr-FR">
+            fr-FR/fr-FR.plg_system_browserupdate.sys.ini
+        </language>
     </languages>
     <updateservers>
-        <server type="extension" priority="1" name="Hybride Conseil Update Server @ GitHub"><![CDATA[http://hybride-conseil.github.io/update.xml]]></server>
+        <server
+                type="extension"
+                priority="1"
+                name="Hybride Conseil Update Server @ GitHub">
+            <![CDATA[http://hybride-conseil.github.io/update.xml]]>
+        </server>
     </updateservers>
     <config>
-        <fields name="params">
-            <fieldset name="basic">
+        <fields
+                name="params">
+            <fieldset
+                    name="basic">
                 <field
                         name="message"
                         type="note"
-                        label="PLG_HC_BROWSERUPDATE_CONFIG_LABEL"
-                />
-
+                        label="PLG_HC_BROWSERUPDATE_CONFIG_LABEL" />
                 <field
                         name="hc-browser-update-ie-edge-version"
                         type="list"
                         label="IE / EDGE"
                         description="PLG_HC_BROWSERUPDATE_BROWSER_VERSION_DESC"
                         default="-4"
-                        size="1"
-                >
-                    <option value="-0.01">PLG_HC_BROWSERUPDATE_ALL_OBSOLETE_VERSIONS</option>
+                        size="1">
+                    <option
+                            value="-0.01">
+                        PLG_HC_BROWSERUPDATE_ALL_OBSOLETE_VERSIONS
+                    </option>
                     <option value="14">&lt;= 14</option>
                     <option value="13">&lt;= 13</option>
                     <option value="12">&lt;= 12</option>
@@ -58,8 +94,7 @@
                         label="Firefox"
                         description="PLG_HC_BROWSERUPDATE_BROWSER_VERSION_DESC"
                         default="-4"
-                        size="1"
-                >
+                        size="1">
                     <option value="-0.01">PLG_HC_BROWSERUPDATE_ALL_OBSOLETE_VERSIONS</option>
                     <option value="56">&lt;= 56</option>
                     <option value="55">&lt;= 55</option>
@@ -80,8 +115,7 @@
                         label="Opera"
                         description="PLG_HC_BROWSERUPDATE_BROWSER_VERSION_DESC"
                         default="-4"
-                        size="1"
-                >
+                        size="1">
                     <option value="-0.01">PLG_HC_BROWSERUPDATE_ALL_OBSOLETE_VERSIONS</option>
                     <option value="49">&lt;= 49</option>
                     <option value="48">&lt;= 48</option>
@@ -102,8 +136,7 @@
                         label="Safari"
                         description="PLG_HC_BROWSERUPDATE_BROWSER_VERSION_DESC"
                         default="-2"
-                        size="1"
-                >
+                        size="1">
                     <option value="-0.01">PLG_HC_BROWSERUPDATE_ALL_OBSOLETE_VERSIONS</option>
                     <option value="10">&lt;= 10</option>
                     <option value="9">&lt;= 9</option>
@@ -124,8 +157,7 @@
                         label="Chrome"
                         description="PLG_HC_BROWSERUPDATE_BROWSER_VERSION_DESC"
                         default="-4"
-                        size="1"
-                >
+                        size="1">
                     <option value="-0.01">PLG_HC_BROWSERUPDATE_ALL_OBSOLETE_VERSIONS</option>
                     <option value="62">&lt;= 62</option>
                     <option value="61">&lt;= 61</option>
@@ -144,26 +176,22 @@
                     name="hc-browser-update-insecure-versions"
                     type="checkbox"
                     label="PLG_HC_BROWSERUPDATE_ALL_DANGEROUS_VERSIONS"
-                    default="checked"
-                    />
+                    default="checked" />
                 <field
                     name="hc-browser-update-unsupported-browsers"
                     type="checkbox"
-                    label="PLG_HC_BROWSERUPDATE_ALL_VERSIONS_VERSIONS"
-                    />
+                    label="PLG_HC_BROWSERUPDATE_ALL_VERSIONS_VERSIONS" />
                 <field
                     name="hc-browser-update-mobile-browsers"
                     type="checkbox"
-                    label="PLG_HC_BROWSERUPDATE_MOBILE_BROWSERS"
-                    />
+                    label="PLG_HC_BROWSERUPDATE_MOBILE_BROWSERS" />
                 <field
                         name="hc-browser-update-style"
                         type="list"
                         label="PLG_HC_BROWSERUPDATE_POPUP_POSITION"
                         description="PLG_HC_BROWSERUPDATE_BROWSER_VERSION_DESC"
                         default="-4"
-                        size="1"
-                >
+                        size="1">
                     <option value="top">PLG_HC_BROWSERUPDATE_POPUP_POSITION_TOP</option>
                     <option value="bottom">PLG_HC_BROWSERUPDATE_POPUP_POSITION_BOTTOM</option>
                     <option value="corner">PLG_HC_BROWSERUPDATE_POPUP_POSITION_CORNER</option>
