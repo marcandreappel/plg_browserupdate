@@ -7,7 +7,7 @@
     <license>LGPL-3.0; see LICENSE.md</license>
     <authorEmail>marc-andre@hyride-conseil.fr</authorEmail>
     <authorUrl>www.hybride-conseil.fr</authorUrl>
-    <version>1.0.0</version>
+    <version>1.0.1</version>
     <description>PLG_HC_BROWSERUPDATE_DESCRIPTION</description>
 
     <files>
