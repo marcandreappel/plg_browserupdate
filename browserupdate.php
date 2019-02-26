@@ -12,7 +12,6 @@ defined('_JEXEC') or die;
 
 /**
  * Class PlgSystemBrowserUpdate
- *
  * @since       3.2
  */
 class plgSystemBrowserupdate extends JPlugin
@@ -27,18 +26,23 @@ class plgSystemBrowserupdate extends JPlugin
 	{
 		$document = JFactory::getDocument();
 
-		if (strcmp(substr(JURI::base(), -15), "/administrator/")!=0)	// Appliquer seulement au frontend.
+		/**
+		 * @brief Appliquer seulement au frontend.
+		 */
+		if (strcmp(substr(JUri::base(), -15), "/administrator/") != 0)
 		{
 			$ie_edge = $this->params->get('hc-browser-update-ie-edge-version');
 			$firefox = $this->params->get('hc-browser-update-firefox-version');
-			$opera = $this->params->get('hc-browser-update-opera-version');
-			$safari = $this->params->get('hc-browser-update-safari-version');
-			$chrome = $this->params->get('hc-browser-update-chrome-version');
+			$opera   = $this->params->get('hc-browser-update-opera-version');
+			$safari  = $this->params->get('hc-browser-update-safari-version');
+			$chrome  = $this->params->get('hc-browser-update-chrome-version');
 
-			$insecure = ($this->params->get('hc-browser-update-insecure-versions')) ? ',insecure:true' : '';
+			$insecure    = ($this->params->get('hc-browser-update-insecure-versions')) ? ',insecure:true' : '';
 			$unsupported = ($this->params->get('hc-browser-update-unsupported-versions')) ? ',unsupported:true' : '';
-			$mobile = ($this->params->get('hc-browser-update-mobile-browsers')) ? '' : ',mobile:false';
-			switch ($this->params->get('hc-browser-update-style')) {
+			$mobile      = ($this->params->get('hc-browser-update-mobile-browsers')) ? '' : ',mobile:false';
+
+			switch ($this->params->get('hc-browser-update-style'))
+			{
 				case 'bottom':
 					$style = ',style:"bottom"';
 					break;
@@ -49,7 +53,6 @@ class plgSystemBrowserupdate extends JPlugin
 				default:
 					$style = '';
 			}
-
 			ob_start();
 			echo <<<EOT
 var \$buoop = {notify:{i:$ie_edge,f:$firefox,o:$opera,s:$safari,c:$chrome}$insecure $unsupported $mobile $style,api:5}; 
@@ -62,7 +65,6 @@ try {document.addEventListener("DOMContentLoaded", \$buo_f,false)}
 catch(e){window.attachEvent("onload", \$buo_f)}
 
 EOT;
-
 			$js = ob_get_contents();
 
 			$document->addScriptDeclaration($js);

@@ -11,10 +11,10 @@
         Marc-André Appel
     </author>
     <creationDate>
-        30/01/2018
+        26/02/2019
     </creationDate>
     <copyright>
-        Copyright © 2018. All rights reserved.
+        Copyright © 2019. All rights reserved.
     </copyright>
     <license>
         LGPL-3.0; see LICENSE.md
@@ -26,7 +26,7 @@
         www.hybride-conseil.fr
     </authorUrl>
     <version>
-        0.1.0
+        1.0.0
     </version>
     <description>
         PLG_HC_BROWSERUPDATE_DESCRIPTION
@@ -47,11 +47,8 @@
         </language>
     </languages>
     <updateservers>
-        <server
-                type="extension"
-                priority="1"
-                name="Hybride Conseil Update Server @ GitHub">
-            <![CDATA[http://hybride-conseil.github.io/update.xml]]>
+        <server type="extension" priority="1" name="Browser Update Plugin">
+            https://raw.githubusercontent.com/hybride-conseil/plg_browserupdate/master/update.xml
         </server>
     </updateservers>
     <config>
@@ -62,7 +59,7 @@
                 <field
                         name="message"
                         type="note"
-                        label="PLG_HC_BROWSERUPDATE_CONFIG_LABEL" />
+                        label="PLG_HC_BROWSERUPDATE_CONFIG_LABEL"/>
                 <field
                         name="hc-browser-update-ie-edge-version"
                         type="list"
@@ -74,12 +71,12 @@
                             value="-0.01">
                         PLG_HC_BROWSERUPDATE_ALL_OBSOLETE_VERSIONS
                     </option>
+                    <option value="18">&lt;= 18</option>
+                    <option value="17">&lt;= 17</option>
+                    <option value="16">&lt;= 16</option>
+                    <option value="15">&lt;= 15</option>
                     <option value="14">&lt;= 14</option>
                     <option value="13">&lt;= 13</option>
-                    <option value="12">&lt;= 12</option>
-                    <option value="11">&lt;= 11</option>
-                    <option value="10">&lt;= 10</option>
-                    <option value="9">&lt;= 9</option>
                     <option value="-6">PLG_HC_BROWSERUPDATE_6_LAST_VERSION</option>
                     <option value="-5">PLG_HC_BROWSERUPDATE_5_LAST_VERSION</option>
                     <option value="-4">PLG_HC_BROWSERUPDATE_4_LAST_VERSION</option>
@@ -96,12 +93,12 @@
                         default="-4"
                         size="1">
                     <option value="-0.01">PLG_HC_BROWSERUPDATE_ALL_OBSOLETE_VERSIONS</option>
-                    <option value="56">&lt;= 56</option>
-                    <option value="55">&lt;= 55</option>
-                    <option value="54">&lt;= 54</option>
-                    <option value="53">&lt;= 53</option>
-                    <option value="52">&lt;= 52</option>
-                    <option value="51">&lt;= 51</option>
+                    <option value="65">&lt;= 65</option>
+                    <option value="64">&lt;= 64</option>
+                    <option value="63">&lt;= 63</option>
+                    <option value="62">&lt;= 62</option>
+                    <option value="61">&lt;= 61</option>
+                    <option value="60">&lt;= 60</option>
                     <option value="-6">PLG_HC_BROWSERUPDATE_6_LAST_VERSION</option>
                     <option value="-5">PLG_HC_BROWSERUPDATE_5_LAST_VERSION</option>
                     <option value="-4">PLG_HC_BROWSERUPDATE_4_LAST_VERSION</option>
@@ -117,12 +114,12 @@
                         default="-4"
                         size="1">
                     <option value="-0.01">PLG_HC_BROWSERUPDATE_ALL_OBSOLETE_VERSIONS</option>
-                    <option value="49">&lt;= 49</option>
-                    <option value="48">&lt;= 48</option>
-                    <option value="47">&lt;= 47</option>
-                    <option value="46">&lt;= 46</option>
-                    <option value="45">&lt;= 45</option>
-                    <option value="44">&lt;= 44</option>
+                    <option value="58">&lt;= 58</option>
+                    <option value="57">&lt;= 57</option>
+                    <option value="56">&lt;= 56</option>
+                    <option value="55">&lt;= 55</option>
+                    <option value="54">&lt;= 54</option>
+                    <option value="53">&lt;= 53</option>
                     <option value="-6">PLG_HC_BROWSERUPDATE_6_LAST_VERSION</option>
                     <option value="-5">PLG_HC_BROWSERUPDATE_5_LAST_VERSION</option>
                     <option value="-4">PLG_HC_BROWSERUPDATE_4_LAST_VERSION</option>
@@ -138,12 +135,12 @@
                         default="-2"
                         size="1">
                     <option value="-0.01">PLG_HC_BROWSERUPDATE_ALL_OBSOLETE_VERSIONS</option>
+                    <option value="12">&lt;= 12</option>
+                    <option value="11">&lt;= 11</option>
                     <option value="10">&lt;= 10</option>
                     <option value="9">&lt;= 9</option>
                     <option value="8">&lt;= 8</option>
                     <option value="7">&lt;= 7</option>
-                    <option value="6">&lt;= 6</option>
-                    <option value="5">&lt;= 5</option>
                     <option value="-6">PLG_HC_BROWSERUPDATE_6_LAST_VERSION</option>
                     <option value="-5">PLG_HC_BROWSERUPDATE_5_LAST_VERSION</option>
                     <option value="-4">PLG_HC_BROWSERUPDATE_4_LAST_VERSION</option>
@@ -159,12 +156,12 @@
                         default="-4"
                         size="1">
                     <option value="-0.01">PLG_HC_BROWSERUPDATE_ALL_OBSOLETE_VERSIONS</option>
-                    <option value="62">&lt;= 62</option>
-                    <option value="61">&lt;= 61</option>
-                    <option value="60">&lt;= 60</option>
-                    <option value="59">&lt;= 59</option>
-                    <option value="58">&lt;= 58</option>
-                    <option value="57">&lt;= 57</option>
+                    <option value="72">&lt;= 72</option>
+                    <option value="71">&lt;= 71</option>
+                    <option value="70">&lt;= 70</option>
+                    <option value="69">&lt;= 69</option>
+                    <option value="68">&lt;= 68</option>
+                    <option value="67">&lt;= 67</option>
                     <option value="-6">PLG_HC_BROWSERUPDATE_6_LAST_VERSION</option>
                     <option value="-5">PLG_HC_BROWSERUPDATE_5_LAST_VERSION</option>
                     <option value="-4">PLG_HC_BROWSERUPDATE_4_LAST_VERSION</option>
@@ -173,18 +170,18 @@
                     <option value="-1">PLG_HC_BROWSERUPDATE_1_LAST_VERSION</option>
                 </field>
                 <field
-                    name="hc-browser-update-insecure-versions"
-                    type="checkbox"
-                    label="PLG_HC_BROWSERUPDATE_ALL_DANGEROUS_VERSIONS"
-                    default="checked" />
+                        name="hc-browser-update-insecure-versions"
+                        type="checkbox"
+                        label="PLG_HC_BROWSERUPDATE_ALL_DANGEROUS_VERSIONS"
+                        default="checked"/>
                 <field
-                    name="hc-browser-update-unsupported-browsers"
-                    type="checkbox"
-                    label="PLG_HC_BROWSERUPDATE_ALL_VERSIONS_VERSIONS" />
+                        name="hc-browser-update-unsupported-browsers"
+                        type="checkbox"
+                        label="PLG_HC_BROWSERUPDATE_ALL_VERSIONS_VERSIONS"/>
                 <field
-                    name="hc-browser-update-mobile-browsers"
-                    type="checkbox"
-                    label="PLG_HC_BROWSERUPDATE_MOBILE_BROWSERS" />
+                        name="hc-browser-update-mobile-browsers"
+                        type="checkbox"
+                        label="PLG_HC_BROWSERUPDATE_MOBILE_BROWSERS"/>
                 <field
                         name="hc-browser-update-style"
                         type="list"
