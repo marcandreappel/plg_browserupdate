@@ -1,56 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
-<extension
-        version="3.1"
-        type="plugin"
-        group="system"
-        method="upgrade">
-    <name>
-        PLG_HC_BROWSERUPDATE_NAME
-    </name>
-    <author>
-        Marc-André Appel
-    </author>
-    <creationDate>
-        26/02/2019
-    </creationDate>
-    <copyright>
-        Copyright © 2019. All rights reserved.
-    </copyright>
-    <license>
-        LGPL-3.0; see LICENSE.md
-    </license>
-    <authorEmail>
-        marc-andre@hyride-conseil.fr
-    </authorEmail>
-    <authorUrl>
-        www.hybride-conseil.fr
-    </authorUrl>
-    <version>
-        1.0.0
-    </version>
-    <description>
-        PLG_HC_BROWSERUPDATE_DESCRIPTION
-    </description>
+<extension version="3.1" type="plugin" group="system" method="upgrade">
+    <name>PLG_HC_BROWSERUPDATE_NAME</name>
+    <author>Marc-André Appel</author>
+    <creationDate>February 26 2019</creationDate>
+    <copyright>Copyright © 2019. All rights reserved.</copyright>
+    <license>LGPL-3.0; see LICENSE.md</license>
+    <authorEmail>marc-andre@hyride-conseil.fr</authorEmail>
+    <authorUrl>www.hybride-conseil.fr</authorUrl>
+    <version>1.0.0</version>
+    <description>PLG_HC_BROWSERUPDATE_DESCRIPTION</description>
+
     <files>
-        <folder>language</folder>
         <filename plugin="browserupdate">browserupdate.php</filename>
+        <folder>language</folder>
     </files>
-    <languages
-            folder="language">
-        <language
-                tag="fr-FR">
-            fr-FR/fr-FR.plg_system_browserupdate.ini
-        </language>
-        <language
-                tag="fr-FR">
-            fr-FR/fr-FR.plg_system_browserupdate.sys.ini
-        </language>
+
+    <languages folder="language">
+        <language tag="fr-FR">fr-FR/fr-FR.plg_system_browserupdate.ini</language>
+        <language tag="fr-FR">fr-FR/fr-FR.plg_system_browserupdate.sys.ini</language>
+        <language tag="en-GB">en-GB/en-GB.plg_system_browserupdate.ini</language>
+        <language tag="en-GB">en-GB/en-GB.plg_system_browserupdate.sys.ini</language>
     </languages>
+
     <updateservers>
-        <server type="extension" priority="1" name="Browser Update Plugin">
-            https://raw.githubusercontent.com/hybride-conseil/plg_browserupdate/master/update.xml
-        </server>
+        <server type="extension"
+                priority="1"
+                name="Browser Update Plugin">https://raw.githubusercontent.com/hybride-conseil/plg_browserupdate/master/update.xml</server>
     </updateservers>
+
     <config>
         <fields
                 name="params">
